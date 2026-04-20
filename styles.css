@@ -276,6 +276,24 @@ a, button, [role="button"]{ cursor: pointer; }
 
   /* Section breathing room */
   section { padding-top: 56px !important; padding-bottom: 56px !important; }
+
+  /* Hero video must stay full-bleed — override the generic img/video/svg rule above */
+  .pc-scene {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .pc-video {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+  }
+  /* Keep the hero section tall enough that the video sits behind heading + paragraph + buttons */
+  #top { padding-top: 40px !important; padding-bottom: 40px !important; min-height: 92vh !important; }
 }
 
 @media (max-width: 560px) {
