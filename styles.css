@@ -290,3 +290,34 @@ a, button, [role="button"]{ cursor: pointer; }
     font-size: 13px !important;
   }
 }
+
+/* =========================================
+   HERO VIDEO: compact banner on mobile
+   ========================================= */
+@media (max-width: 900px) {
+  /* Kill the 82vh min-height so hero sizes to content */
+  [style*="min-height"] { min-height: 0 !important; }
+
+  /* Video scene becomes a normal-flow banner at the top */
+  .pc-scene {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    margin-bottom: 24px !important;
+  }
+  .pc-video {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .pc-wash,
+  .pc-vignette {
+    border-radius: 14px !important;
+  }
+}
